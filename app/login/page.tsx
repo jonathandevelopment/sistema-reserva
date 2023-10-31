@@ -24,14 +24,15 @@ export default function Login() {
         </svg>{' '}
         Back
       </Link>
-
+      
       <form
         className="flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
         action="/auth/sign-in"
         method="post"
       >
+        <h1 className='text-3xl font-semibold my-10'>Sistema de Reservas</h1>
         <label className="text-md" htmlFor="email">
-          Email
+          Correo Electronico
         </label>
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
@@ -40,7 +41,7 @@ export default function Login() {
           required
         />
         <label className="text-md" htmlFor="password">
-          Password
+          Contraseña
         </label>
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
@@ -50,13 +51,13 @@ export default function Login() {
           required
         />
         <button className="bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
-          Sign In
+          Ingresar
         </button>
         <button
           formAction="/auth/sign-up"
           className="border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
         >
-          Sign Up
+          Crear una cuenta
         </button>
         <Messages />
       </form>
